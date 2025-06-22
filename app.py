@@ -216,7 +216,8 @@ X_train_r, X_test_r, y_train_r, y_test_r = train_test_split(X_reg, y_reg, test_s
 reg_model = RandomForestRegressor(n_estimators=100, random_state=42)
 reg_model.fit(X_train_r, y_train_r)
 y_pred_r = reg_model.predict(X_test_r)
-rmse = mean_squared_error(y_test_r, y_pred_r, squared=False)
+rmse = mean_squared_error(y_test_r, y_pred_r) ** 0.5
+
 
 # === Modelo 2: CLASIFICACIÓN (review mala)
 X_class = df[["delivery_time_days", "delivery_delay_days"]]
