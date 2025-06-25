@@ -302,11 +302,11 @@ with tab1:
 with tab2:
     st.markdown("### ❗ Average Bad Review Risk by Delay Segment")
 
-   delay_bins = pd.cut(
-    X_test_c["delivery_delay_days"],
-    bins=[-20, -5, -1, 0, 1, 5, 10, 20],
-    labels=["Very Early", "Early", "Slightly Early", "On Time", "Slightly Late", "Late", "Very Late"]
-)
+delay_bins = pd.cut(
+        X_test_c["delivery_delay_days"],
+        bins=[-20, -5, -1, 0, 1, 5, 10, 20],
+        labels=["Very Early", "Early", "Slightly Early", "On Time", "Slightly Late", "Late", "Very Late"]
+    )
     delay_risk_df = pd.DataFrame({
         "delay_segment": delay_bins,
         "risk": y_pred_proba
