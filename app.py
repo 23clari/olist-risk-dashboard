@@ -194,7 +194,6 @@ fig_forecast.update_layout(
 st.plotly_chart(fig_forecast, use_container_width=True)
         
         
-        
 
 
 # === SECCIÓN: MODEL CENTER ===
@@ -556,5 +555,4 @@ st.markdown("""
 © 2025 · Olistic Predictive Dashboard · Created by Group 1 – IE Strategic Analytics Lab
 </p>
 """, unsafe_allow_html=True)
-
 
