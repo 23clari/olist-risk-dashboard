@@ -270,28 +270,6 @@ with tab1:
         color_discrete_sequence=["#0984e3"]
     )
     st.plotly_chart(fig1, use_container_width=True)
-# === TAB 2: Riesgo de review por tramos de retraso ===
-with tab2:
-    st.markdown("### ❗ Average Bad Review Risk by Delay Segment")
-
-    delay_bins = pd.cut(
-        X_test_c["delivery_delay_days"],
-        bins=[-20, -5, -1, 0, 1, 5, 10, 20],
-        labels=["Very Early", "Early", "Slightly Early", "On Time", "Slightly Late", "Late", "Very Late"]
-    )
-
-    delay_risk_df = pd.DataFrame({
-        "delay_segment": delay_bins,
-        "risk": y_pred_proba
-    }).groupby("delay_segment")["risk"].mean().reset_index()
-
-    fig2 = px.bar(
-        delay_risk_df, x="delay_segment", y="risk",
-        title="Bad Review Risk by Delivery Timing",
-        labels={"risk": "Avg Predicted Risk"},
-        color="risk", color_continuous_scale="Reds"
-    )
-    st.plotly_chart(fig2, use_container_width=True)
 
 
 # === SECCIÓN: SIMULADOR DE ESCENARIOS ===
