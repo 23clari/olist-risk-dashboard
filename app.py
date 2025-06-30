@@ -294,20 +294,6 @@ with tab2:
     st.plotly_chart(fig2, use_container_width=True)
 
 
-# === TAB 3: Distribución de scores predichos ===
-with tab3:
-    st.markdown("### 📊 Distribution of Predicted Bad Review Risk")
-
-    fig3 = px.histogram(
-        y_pred_proba,
-        nbins=40,
-        title="Distribution of Bad Review Probabilities",
-        color_discrete_sequence=["#6c5ce7"]
-    )
-    fig3.update_layout(xaxis_title="Predicted Probability", yaxis_title="Order Count")
-    st.plotly_chart(fig3, use_container_width=True)
-
-
 # === SECCIÓN: SIMULADOR DE ESCENARIOS ===
 st.markdown("<div id='simulator'></div>", unsafe_allow_html=True)
 st.markdown("## 🧪 What-If Risk Simulator")
