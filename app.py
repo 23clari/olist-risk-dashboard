@@ -246,10 +246,9 @@ st.markdown("<div id='risk'></div>", unsafe_allow_html=True)
 st.markdown("## 📊 Risk Explorer Dashboard")
 st.markdown("Explore delivery patterns and bad review risk using our trained models.")
 
-tab1, tab2, tab3 = st.tabs([
-    "📦 Delivery Delay Accuracy",
-    "❗ Review Risk by Delay",
-    "📊 Risk Score Distribution"
+tab1 = st.tabs([
+    "📦 Delivery Delay Accuracy"
+    
 ])
 
 # === TAB 1: Predicción vs realidad del retraso ===
