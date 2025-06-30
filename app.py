@@ -71,7 +71,6 @@ h1, h2, h3 {
     <a href="#model">Model</a>
     <a href="#risk">Risk Explorer</a>
     <a href="#simulator">Simulator</a>
-    <a href="#strategy">Strategy</a>
     <a href="#contact">Contact</a>
 </div>
 """, unsafe_allow_html=True)
